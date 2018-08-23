@@ -1,0 +1,68 @@
+<h1>Admin: Add New Furniture</h1>
+
+<%= form_with scope: :furniture, local: true do |form| %>
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+   
+    <p>
+      <%= form.label :description %>      
+      <p>(A lengthy description for the target item.)</p>
+      <%= form.text_area :description %>
+    </p>
+
+    <p>
+        <%= form.label :style %>
+        <p>(Terse item description.)</p>
+        <%= form.text_area :style %>
+    </p>
+
+    <p>
+        <%= form.label :features %>
+        <p>(Special things about the item.)</p>
+        <%= form.text_area :features %>
+    </p>
+
+    <p>
+        <%= form.label :materials %>
+        <p>(Sepearte with commas)</p>
+        <%= form.text_area :materials %>
+    </p>
+
+    <p>
+        <%= form.label :care %>
+        <br>
+        <%= form.text_area :care %>
+    </p>
+
+    <p>
+        <%= form.label :sku %>
+        <br>
+        <%= form.text_field :sku %>
+    </p>
+
+    <p>
+        <%= form.label :weight %>
+        <p>(In pounds.)</p>
+        <%= form.number_field :weight %>
+    </p>
+    
+    <p>
+        <%= form.label :options %>
+        <br>
+        <%= radio_button_tag(:options, "walnut") %>
+        <%= label_tag(:walnut, "walnut") %>
+        <%= radio_button_tag(:options, "oak") %>
+        <%= label_tag(:oak, "oak") %>
+        <%= radio_button_tag(:options, "birch") %>
+        <%= label_tag(:birch, "birch") %>
+        <%= radio_button_tag(:options, "suffering") %>
+        <%= label_tag(:suffering, "suffering") %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+
+  <% end %>
