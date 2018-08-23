@@ -43,6 +43,12 @@
     </p>
 
     <p>
+    <%= form.label :category %>
+    <br>
+    <%= form.text_field :category %>
+</p>
+
+    <p>
         <%= form.label :weight %>
         <p>(In pounds.)</p>
         <%= form.number_field :weight %>
@@ -55,7 +61,7 @@
         <%= label_tag(:walnut, "walnut") %>
         <%= check_box_tag(:options, "oak") %>
         <%= label_tag(:oak, "oak") %>
-        <%= radio_button_tag(:options, "birch") %>
+        <%= check_box_tag(:options, "birch") %>
         <%= label_tag(:birch, "birch") %>
         <%= check_box_tag(:options, "suffering") %>
         <%= label_tag(:suffering, "suffering") %>

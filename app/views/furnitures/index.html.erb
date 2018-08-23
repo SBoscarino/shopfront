@@ -6,8 +6,16 @@
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Style</th>
+    <th>Features</th>
+    <th>Materials</th>
+    <th>Care</th>
+    <th>SKU</th>
+    <th>Weight</th>
+    <th>Options</th>
+    <th>Category</th>
     <th colspan="2"></th>
   </tr>
  
@@ -20,6 +28,7 @@
       <td><%= furniture.materials %></td>
       <td><%= furniture.care %></td>
       <td><%= furniture.sku %></td>
+      <td><%= furniture.category %></td>
       <td><%= furniture.weight %></td>
       <td><%= furniture.options %></td>
       <td><%= link_to 'Details', furniture_path(furniture) %></td>
