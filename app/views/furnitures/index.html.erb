@@ -1,42 +1,32 @@
+<head>
+<%= stylesheet_link_tag "admin" %>
+</head>
+
+<body>
 
 <h1>Listing All Items</h1>
  
 
 <%= link_to 'Add Another', new_furniture_path %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Style</th>
-    <th>Features</th>
-    <th>Materials</th>
-    <th>Care</th>
-    <th>SKU</th>
-    <th>Weight</th>
-    <th>Options</th>
-    <th>Category</th>
-    <th colspan="2"></th>
-  </tr>
- 
+
   <% @furnitures.each do |furniture| %>
-    <tr>
-      <td><%= furniture.name %></td>
-      <td><%= furniture.description %></td>
-      <td><%= furniture.style %></td>
-      <td><%= furniture.features %></td>
-      <td><%= furniture.materials %></td>
-      <td><%= furniture.care %></td>
-      <td><%= furniture.sku %></td>
-      <td><%= furniture.category %></td>
-      <td><%= furniture.weight %></td>
-      <td><%= furniture.options %></td>
-      <td><%= link_to 'Details', furniture_path(furniture) %></td>
-      <td><%= link_to 'Make Changes', edit_furniture_path(furniture) %></td>
-      <td><%= link_to 'Delete', furniture_path(furniture),
-              method: :delete,
-              data: { confirm: 'Are you POSITIVE that you want to delete this?' } %></td>
-    </tr>
+    <div>
+      <div>
+        <h2><%= furniture.name %><h2>
+        <h3><%= furniture.sku %></h3>
+        <h3><%= furniture.category %></h3>
+      </div>
+      <div>
+        <h4><%= link_to 'More Details', furniture_path(furniture) %></h4>
+        <h4><%= link_to 'Make Changes', edit_furniture_path(furniture) %></h4>
+        <h4><%= link_to 'Delete Item', furniture_path(furniture),
+                method: :delete,
+                data: { confirm: 'Are you POSITIVE that you want to delete this?' } %></h4>
+        </h4>
+      </div>
+    </div>
   <% end %>
-</table>
+  
+  </body>
 

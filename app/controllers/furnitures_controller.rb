@@ -1,4 +1,5 @@
 class FurnituresController < ApplicationController
+
     def index
         @furnitures = Furniture.all
     end
@@ -13,6 +14,7 @@ class FurnituresController < ApplicationController
 
     def edit
         @furniture = Furniture.find(params[:id])
+        
     end
 
     def create
@@ -31,6 +33,7 @@ class FurnituresController < ApplicationController
        
         if @furniture.update(furniture_params)
           redirect_to @furniture
+          # raise params.inspect
         else
           render 'edit'
         end
@@ -44,7 +47,8 @@ class FurnituresController < ApplicationController
     end
     private
         def furniture_params
-            params.require(:furniture).permit(:name, :description, :style, :features, :materials, :care, :sku, :weight, :options, :category)
+            params.require(:furniture).permit(:name, :description, :style, :features, :materials, :care, :sku, :weight, :category, :hasOak,
+            :hasCedar, :hasBirch, :hasPine, :hasSuffering, :hasUnicorns)
     end
 
 end

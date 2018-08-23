@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2018_08_23_154008) do
     t.string "sku"
     t.string "category"
     t.integer "weight"
-    t.string "options"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
