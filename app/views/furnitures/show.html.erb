@@ -1,0 +1,48 @@
+<h1> Chosen Item </h1>
+<p>
+    <strong>Name:</strong>
+    <%= @furniture.name %>
+</p>
+
+<p>
+    <strong>Description:</strong>
+    <%= @furniture.description %>
+</p>
+
+<p>
+    <strong>Style:</strong>
+    <%= @furniture.style %>
+</p>
+
+<p>
+    <strong>Features:</strong>
+    <%= @furniture.features %>
+</p>
+
+<p>
+    <strong>Materials:</strong>
+    <%= @furniture.materials %>
+</p>
+
+<p>
+    <strong>Care:</strong>
+    <%= @furniture.care %>
+</p>
+
+<p>
+    <strong>SKU:</strong>
+    <%= @furniture.sku %>
+</p>
+
+<p>
+    <strong>Weight:</strong>
+    <%= @furniture.weight %>
+</p>
+<p>
+    <strong>Options:</strong>
+    <%= @furniture.options %>
+</p>
+
+
+<%= link_to 'Edit', edit_furniture_path(@furniture) %>
+<%= link_to 'Back', furnitures_path %>

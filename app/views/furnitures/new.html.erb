@@ -1,6 +1,6 @@
 <h1>Admin: Add New Furniture</h1>
 
-<%= form_with scope: :furniture, local: true do |form| %>
+<%= form_with model: @furniture, local: true do |form| %>
     <p>
       <%= form.label :name %><br>
       <%= form.text_field :name %>
@@ -47,17 +47,17 @@
         <p>(In pounds.)</p>
         <%= form.number_field :weight %>
     </p>
-    
+
     <p>
         <%= form.label :options %>
         <br>
-        <%= radio_button_tag(:options, "walnut") %>
+        <%= check_box_tag(:options, "walnut") %>
         <%= label_tag(:walnut, "walnut") %>
-        <%= radio_button_tag(:options, "oak") %>
+        <%= check_box_tag(:options, "oak") %>
         <%= label_tag(:oak, "oak") %>
         <%= radio_button_tag(:options, "birch") %>
         <%= label_tag(:birch, "birch") %>
-        <%= radio_button_tag(:options, "suffering") %>
+        <%= check_box_tag(:options, "suffering") %>
         <%= label_tag(:suffering, "suffering") %>
     </p>
 
